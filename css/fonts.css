@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Calibri";
+  font-style: normal;
+  src: url(./fonts/Calibri.ttf);
+}
+@font-face {
+  font-family: "digital";
+  font-style: normal;
+  src: url(../fonts/digital-7.ttf);
+}
+@font-face {
+  font-family: "digitalMono";
+  font-style: normal;
+  src: url(./fonts/digital-7mono.ttf);
+}

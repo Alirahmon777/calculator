@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./script.js" defer></script>
+    <title>Online Calculator</title>
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="all">
+          <input type="checkbox" id="toggle" />
+      </div>
+      <div class="calculator__value">
+        <p class="value" id="value"></p>
+      </div>
+      <div class="calculator__body" id="c-body">
+        <button class="button dark" onclick="operation('^')">
+          x<sup style="font-size: 16px">y</sup>
+        </button>
+        <button class="button dark" onclick="log('lg')">lg</button>
+        <button class="button dark" onclick="log('ln')">ln</button>
+        <button class="button dark" onclick="insert('(')">(</button>
+        <button class="button dark" onclick="insert(')')">)</button>
+
+        <button class="button dark" onclick="operation('sqr')">x&#xb2;</button>
+        <button class="button dark" id="Clear" onclick="clean()">AC</button>
+        <button class="button dark" id="backspace" onclick="back()">
+          &#x2190;
+        </button>
+        <button class="button dark" onclick="percent()">&#x25;</button>
+        <button class="button dark" onclick="insert('/')">&#xf7;</button>
+
+        <button class="button dark" onclick="operation('^-1')">
+          x<sup>&#x208b;&#x2081;</sup>
+        </button>
+        <button class="button number" onclick="insert('7')">7</button>
+        <button class="button number" onclick="insert('8')">8</button>
+        <button class="button number" onclick="insert('9')">9</button>
+        <button class="button dark" onclick="insert('*')">&#xd7;</button>
+
+        <button class="button dark" onclick="operation('sqrt')">
+          &radic;x
+        </button>
+        <button class="button number" onclick="insert('4')">4</button>
+        <button class="button number" onclick="insert('5')">5</button>
+        <button class="button number" onclick="insert('6')">6</button>
+        <button class="button dark" onclick="insert('-')">-</button>
+
+        <button class="button dark" onclick="fact()">x!</button>
+        <button class="button number" onclick="insert('1')">1</button>
+        <button class="button number" onclick="insert('2')">2</button>
+        <button class="button number" onclick="insert('3')">3</button>
+        <button class="button dark" onclick="insert('+')">+</button>
+
+        <button class="button dark" onclick="constant('pi')">&#x220f;</button>
+        <button class="button number" onclick="constant('e')">&#x212e;</button>
+        <button class="button zero number" onclick="insert('0')">0</button>
+        <button class="button number" onclick="insert('.')">.</button>
+        <button class="button equals" id="equals" onclick="equal()">=</button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../img/carbon_fibre.png);
+}
+
+.calculator {
+  position: relative;
+  height: 600px;
+  padding: 25px;
+  padding-top: 45px;
+  border-radius: 10px;
+  background: #efeeea;
+  box-shadow: -10px 20px 25px #5a5a5a;
+}
+
+.calculator__body {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 12px;
+  background: #efeeea;
+}
+
+.calculator__value {
+  height: 70px;
+  width: 440px;
+  padding: 5px;
+  margin: 0 auto;
+  background: #cccbc6;
+  border-radius: 4px;
+  box-shadow: inset -2px 2px 2px #1a1a1a, inset 2px -2px 2px #5a5a5a;
+  overflow: hidden;
+}
+
+.value {
+  position: relative;
+  text-align: end;
+  font-size: 60px;
+  font-family: "digital";
+  color: #454a4e;
+}
+
+.value::before {
+  content: "888888888888888";
+  letter-spacing: 0;
+  position: absolute;
+  right: 0;
+  opacity: 0.1;
+}
+
+.button {
+  font-family: "Calibri";
+  font-size: 24px;
+  min-height: 60px;
+  min-width: 65px;
+  font-weight: 600;
+  border: 1px solid #c5c6c6;
+  box-shadow: 0 1px 3px #919290;
+  border-radius: 5px;
+  cursor: pointer;
+  background: linear-gradient(#f1f2ee, #eff0ec);
+  transition: all 0.2s ease-in-out;
+}
+
+.dark {
+  color: #f0f9fe;
+  background: #454a4e;
+  box-shadow: 0 0 1px 1px #444444;
+  border: 1px solid #d6d7d31d;
+}
+
+#equals,
+#Clear,
+#backspace {
+  color: #f0f9fe;
+  background: #dd721f;
+  box-shadow: 0 0 1px 1px #e9542b;
+  border: 1px solid #d6d7d31d;
+}
+
+.button:active {
+  box-shadow: none !important;
+}
+.all {
+  position: absolute;
+  top: -53px;
+  right: 25px;
+  margin: 60px auto;
+  z-index: 1;
+}
+.dark-mode-calc #toggle {
+  background-color: #ffffff;
+}
+.dark-mode-calc #toggle:after {
+  background-color: transparent;
+  box-shadow: 7px 7px #15181f;
+  top: -2px;
+  left: 30px;
+}
+#toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 30px;
+  width: 65px;
+  background-color: #15181f;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+}
+#toggle:after {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: #ffffff;
+  top: 5px;
+  left: 7px;
+  border-radius: 50%;
+}
+.dark-mode-calc {
+  background:linear-gradient(#54595d, #45484D);
+  box-shadow: -10px 20px 25px #050505;
+}
+.dark-mode {
+  background-color: transparent;
+}
+.dark-value-calc {
+  background-color: #38393e;
+  box-shadow: inset -2px 2px 2px #1a1a1a, inset 2px -2px 2px #232323;
+}
+.dark-value {
+  color: #b4b7bc;
+}
+.dark-btn {
+  background: linear-gradient(#6a6d72, #585b62);
+  color: #f0f9fe;
+  border: 1px solid #3E4247;
+  box-shadow: 0 0 3px #282828, inset 0 0 2px 1px #696969;
+}
