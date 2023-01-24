@@ -3,6 +3,56 @@ let value = document.querySelector("#value");
 
 let power = "";
 
+window.addEventListener("keydown", function keycode(e) {
+  if (e.code === "NumpadEnter" || e.code === "Enter") {
+    document.querySelector("#equals").onclick();
+  } else if (e.key == "0") {
+    value.textContent += 0;
+  } else if (e.key == "1") {
+    value.textContent += 1;
+  } else if (e.key == "2") {
+    value.textContent += 2;
+  } else if (e.key == "3") {
+    value.textContent += 3;
+  } else if (e.key == "4") {
+    value.textContent += 4;
+  } else if (e.key == "5") {
+    value.textContent += 5;
+  } else if (e.key == "6") {
+    value.textContent += 6;
+  } else if (e.key == "7") {
+    value.textContent += 7;
+  } else if (e.key == "8") {
+    value.textContent += 8;
+  } else if (e.key == "9") {
+    value.textContent += 9;
+  } else if (e.key == ".") {
+    value.textContent += ".";
+  } else if (e.keyCode == "8") {
+    back();
+  } else if (e.keyCode == "46") {
+    clean();
+  }
+
+  if (e.key == "+") {
+    value.textContent += "+";
+  } else if (e.key == "-") {
+    value.textContent += "-";
+  } else if (e.key == "/") {
+    value.textContent += "/";
+  } else if (e.key == "*") {
+    value.textContent += "*";
+  }
+  if (value.length == 1) {
+    value.textContent = value.textContent.substring(
+      0,
+      value.textContent.length - 1
+    );
+  }
+
+  console.log(e);
+});
+
 function infinity() {
   if (
     value.textContent === "Infinity" ||
@@ -22,16 +72,13 @@ function insert(num) {
 }
 
 function clean() {
-  value.textContent = "0";
+  value.textContent = "";
   power = "";
 }
 
 function back() {
   let exp = value.textContent;
   value.textContent = exp.substring(0, exp.length - 1);
-  if (value.textContent == 0) {
-    value.textContent = "0";
-  }
 }
 
 function equal() {
@@ -91,9 +138,9 @@ function log(name) {
     value.textContent = Math.log(eval(value.textContent)).toFixed(8);
   }
 }
-infinity();
 
 document.getElementById("toggle").addEventListener("click", function () {
+  document.querySelector("body").classList.toggle("dark-body");
   document.querySelector(".calculator").classList.toggle("dark-mode-calc");
   document.getElementById("c-body").classList.toggle("dark-mode");
   document

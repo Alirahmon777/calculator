@@ -130,6 +130,11 @@ body {
   left: 7px;
   border-radius: 50%;
 }
+
+.dark-body{
+  background-image: url(../img/checkerboard-cross.png)
+}
+
 .dark-mode-calc {
   background:linear-gradient(#54595d, #45484D);
   box-shadow: -10px 20px 25px #050505;
